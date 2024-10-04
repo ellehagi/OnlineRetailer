@@ -1,0 +1,34 @@
+INFO:root:User elle logged in successfully.
+INFO:root:Failed login attempt for elle.
+INFO:root:User elle logged in successfully.
+INFO:root:Failed login attempt for elle.
+INFO:root:User elle logged in successfully.
+INFO:root:User elle logged in successfully.
+INFO:root:User elle logged in successfully.
+INFO:root:User elle logged in successfully.
+INFO:root:User elle logged in successfully.
+INFO:root:User elle logged in successfully.
+INFO:root:User elle logged in successfully.
+INFO:root:Failed login attempt for validuser.
+INFO:root:Failed login attempt for bruteforceuser.
+INFO:root:Failed login attempt for bruteforceuser.
+INFO:root:Failed login attempt for bruteforceuser.
+INFO:root:Failed login attempt for wrongpassuser.
+INFO:root:Failed login attempt for validuser.
+INFO:root:Failed login attempt for bruteforceuser.
+INFO:root:Failed login attempt for bruteforceuser.
+INFO:root:Failed login attempt for bruteforceuser.
+INFO:root:Failed login attempt for wrongpassuser.
+INFO:root:Failed login attempt for validuser.
+INFO:root:Failed login attempt for bruteforceuser.
+INFO:root:Failed login attempt for bruteforceuser.
+INFO:root:Failed login attempt for bruteforceuser.
+INFO:root:Failed login attempt for wrongpassuser.
+INFO:root:Failed login attempt for wrongpassuser.
+INFO:root:Failed login attempt for authuser.
+INFO:root:Failed login attempt for wrongpassuser.
+INFO:root:Failed login attempt for authuser.
+INFO:root:Failed login attempt for wrongpassuser.
+INFO:root:Failed login attempt for authuser.
+INFO:root:User login attempt
+INFO:root:User login attempt
