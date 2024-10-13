@@ -1,0 +1,26 @@
+{
+    "updateuser": {
+        "username": "updateuser",
+        "password": "new_encrypted_password"
+    },
+    "cat": {
+        "username": "cat",
+        "password": "gAAAAABnBDcc8UloGSWNuo5t5aZgkm9IIyRhChJmxxfjG_T0ThhMV2urQJkqwvpb2t7F4GteLHWisgKdSDC7iF_JS0IHysXWnQ=="
+    },
+    "elle": {
+        "username": "elle",
+        "password": "gAAAAABnC9xfpFKOwVaRRObAgOzFHg9C9U04XUKjCWJCK84GCNYfh3Mtaegu2PqKAQgn_M8Wt1wZxu2y2mkG-JPVgPcSQvrpgw=="
+    },
+    "caty": {
+        "username": "caty",
+        "password": "gAAAAABnC97wSvbgfBsaEQ1qePyh9bgLcgm5bf_bQupTbzxXlDuRTIHa552FWLDf4pXR-98FRxPjUnmvADNpw-Cz70272LXj6g=="
+    },
+    "kitty": {
+        "username": "kitty",
+        "password": "gAAAAABnC--XLsTgoHdpZq654kDZ5a_ifr6UYRrySa0-ex746M0xWZe2QfFWWyKZeCDwqQHneFCXgq4u7wa3Nj2WflMo2XMung=="
+    },
+    "kayla": {
+        "username": "kayla",
+        "password": "gAAAAABnC_OgiBFFmTG3-vMT0n1x3V4kbpeoXas4-2fIb1E4w2QxRs7dWZkLWKU_uMIJ0BfmCqzgSferpp4Dhx3uY3_wEMyixg=="
+    }
+}

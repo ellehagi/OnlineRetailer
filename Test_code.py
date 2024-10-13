@@ -9,9 +9,10 @@ class TestUserManager(unittest.TestCase):
         self.users = {}
         self.security = MagicMock(spec=Security)
         self.user_manager = UserManager(self.users, self.security)
+        self.user_manager.save_users = MagicMock()
 
     def test_create_user(self):
-        #Test create a user
+        # Test creating a user
         self.security.is_valid_password.return_value = True
         self.security.encrypt_password.return_value = "encrypted_password"
         
@@ -20,7 +21,7 @@ class TestUserManager(unittest.TestCase):
         self.assertEqual(self.users["testuser"]["password"], "encrypted_password")
 
     def test_authenticate_user(self):
-        #Test  user authentication
+        # Test user authentication
         self.security.decrypt_password.return_value = "TestPassword123"
         self.user_manager.create_user("validuser", "TestPassword123")
         
@@ -29,13 +30,13 @@ class TestUserManager(unittest.TestCase):
         self.assertEqual(user.username, "validuser")
 
     def test_delete_user(self):
-        #Test deleting a user
+        # Test deleting a user
         self.user_manager.create_user("deletableuser", "password")
         self.user_manager.delete_user("deletableuser")
         self.assertNotIn("deletableuser", self.users)
 
     def test_update_user(self):
-        #Test updating a user's password
+        # Test updating a user's password
         self.security.is_valid_password.return_value = True
         self.security.encrypt_password.return_value = "new_encrypted_password"
         
@@ -47,18 +48,18 @@ class TestUserManager(unittest.TestCase):
 class TestSecurity(unittest.TestCase):
 
     def setUp(self):
-        # Initialize Security object with a generated key
+        # Initialise Security object with a generated key
         self.security = Security()
 
     def test_encrypt_decrypt_password(self):
-        #Testing encryption and decryption of a password
+        # Testing encryption and decryption of a password
         password = "SecurePassword123!"
         encrypted_password = self.security.encrypt_password(password)
         decrypted_password = self.security.decrypt_password(encrypted_password)
         self.assertEqual(password, decrypted_password)
 
     def test_is_valid_password(self):
-        #Test password validation with various valid and invalid passwords
+        # Test password validation with various valid and invalid passwords
         valid_password = "StrongPass1!"
         self.assertTrue(self.security.is_valid_password(valid_password))
 
@@ -75,10 +76,10 @@ class TestSecurity(unittest.TestCase):
         self.assertFalse(self.security.is_valid_password(no_special_char_password))
 
     def test_log_event(self):
-        #Test if events are logged correctly
+        # Test if events are logged correctly
         event_message = "User login attempt"
         self.security.log_event(event_message)
-        # Check if a text is written to the log file
+        # Check if the text is written to the log file
         with open("event_log.txt", "r") as log_file:
             log_contents = log_file.read()
         self.assertIn(event_message, log_contents)
@@ -89,14 +90,11 @@ class TestSecurity(unittest.TestCase):
         # Test toggling security on
         self.security.toggle_security(True)
 
-if __name__ == '__main__':
-    unittest.main()
-
 
 class TestUser(unittest.TestCase):
 
     def test_user_creation(self):
-        #Test User class creation
+        # Test User class creation
         user = User("testuser", "TestPassword123")
         self.assertEqual(user.username, "testuser")
         self.assertEqual(user.password, "TestPassword123")

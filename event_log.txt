@@ -32,3 +32,26 @@ INFO:root:Failed login attempt for wrongpassuser.
 INFO:root:Failed login attempt for authuser.
 INFO:root:User login attempt
 INFO:root:User login attempt
+INFO:root:User login attempt
+INFO:root:User login attempt
+INFO:root:User elle logged in successfully.
+INFO:root:User elle logged in successfully.
+INFO:root:User cat logged in successfully.
+INFO:root:User cat logged in successfully.
+INFO:root:User login attempt
+INFO:root:User login attempt
+INFO:root:User elle deleted.
+INFO:root:User cat logged in successfully.
+WARNING:root:Insecure API started without encryption.
+INFO:root:User elle logged in successfully.
+WARNING:root:Insecure API started without encryption.
+INFO:root:Secure API started with encryption enabled.
+WARNING:root:Insecure API started without encryption.
+INFO:root:User caty logged in successfully.
+INFO:root:Secure API started with encryption enabled.
+WARNING:root:Insecure API started without encryption.
+INFO:root:Secure API started with encryption enabled.
+INFO:root:Failed login attempt for kitty.
+INFO:root:User kitty logged in successfully.
+INFO:root:Secure API started with encryption enabled.
+WARNING:root:Insecure API started without encryption.

@@ -2,26 +2,40 @@ import re
 from cryptography.fernet import Fernet
 import logging
 
-# Set up logging to write logs to 'event_log.txt' at the INFO level
+# Set up logging to write logs to 'event_log.txt'
 logging.basicConfig(filename='event_log.txt', level=logging.INFO)
 
 class Security:
     def __init__(self, encryption_key=None):
-         # Initialize the class with an encryption key If it is not given generate a new one
-        self.encryption_key = encryption_key or Fernet.generate_key()
-        # Create a Fernet object for encryption/decryption
+        # Load encryption key from file or use provided key
+        self.encryption_key = encryption_key or self.load_key()
         self.fernet = Fernet(self.encryption_key)
 
+    def load_key(self):
+        # Load the encryption key from a file
+        try:
+            with open("secret.key", "rb") as key_file:
+                return key_file.read()
+        except FileNotFoundError:
+            raise FileNotFoundError("Encryption key file not found! Please generate a key using the generate_key.py script.")
+
     def encrypt_password(self, password):
-        # Encrypt the password thats given and return it as a string
+        # Encrypt the password and return it as a string
         return self.fernet.encrypt(password.encode()).decode()
 
     def decrypt_password(self, encrypted_password):
-         # Decrypt the encrypted password thats given and return it as a string
+        # Decrypt the password and return it as a string
         return self.fernet.decrypt(encrypted_password.encode()).decode()
 
+    def encrypt_data(self, data):
+        return self.fernet.encrypt(data.encode()).decode()
+
+    def decrypt_data(self, encrypted_data):
+        # Decrypt the encrypted data and return it as a string
+        return self.fernet.decrypt(encrypted_data.encode()).decode()
+
     def log_event(self, message):
-         # Log a provided message to the 'event_log.txt' file
+        # Log a provided message to the 'event_log.txt' file
         logging.info(message)
 
     def toggle_security(self, enable):

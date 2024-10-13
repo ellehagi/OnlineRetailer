@@ -33,7 +33,7 @@ class Admin:
              # Get product id and delete the product.
             elif choice == '3':
                 item_id = input("Enter product ID to delete: ")
-                self.item_manager.delete_item(item_id)
+                self.item_manager.remove_item(item_id)
             # Get user details to create a new user.
             elif choice == '4':
                 username = input("Enter username for new user: ")
